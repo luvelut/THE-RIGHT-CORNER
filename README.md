@@ -38,7 +38,7 @@ Pour accéder à la partie utilisateur, vous pouvez soit vous inscrire, soit uti
 
 * Maquettes (mockup) de l'application : listing des pages nécessaires et des champs qui seront dans les formulaires (permet de s'assurer que l'on ne va rien oublier lors de la création de la base de données)
 * Réalisation du schéma UML :
-(photo du schéma)
+![capture d'écran côté front](https://github.com/luvelut/THE-RIGHT-CORNER/blob/main/uml.PNG) 
 * Création de la base de données et des fixtures du site
 * Développement puis intégration
 
@@ -46,12 +46,13 @@ Pour accéder à la partie utilisateur, vous pouvez soit vous inscrire, soit uti
 ## Aperçu du site
 
 Accueil (liste des 10 dernières annonces avec recherche) : possibilité de voir chaque annonce en détaik en cliquant dessus.
-(photo index front)
+![capture d'écran côté front](https://github.com/luvelut/THE-RIGHT-CORNER/blob/main/index_front.JPG) 
 
 Connexion et inscription 
-(photo connexion et inscription)
+![capture d'écran côté front](https://github.com/luvelut/THE-RIGHT-CORNER/blob/main/connexion.JPG) 
 
 Partie utilisateur : navigation grâce au menu déroulant, gestion de ses propres annonces et modification de ses données personnelles.
+![capture d'écran côté front](https://github.com/luvelut/THE-RIGHT-CORNER/blob/main/membre_index.JPG) 
 
 Partie administration : navigation grâce au menu déroulant, gestion des annonces et des utilisateurs (CRUD)
-(photo partie admin)
+![capture d'écran côté front](https://github.com/luvelut/THE-RIGHT-CORNER/blob/main/admin_gestion.JPG) 
