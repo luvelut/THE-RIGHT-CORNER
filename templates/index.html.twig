@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {% include 'headers/_bandeau_in.html.twig' %}
+
+    <div class="search">
+        {{ form_start(form) }}
+        <div class="search-form">
+            {{ form_row(form.title) }}
+        </div>
+        <div class="search-form">
+            <input class="btn btn-orange" type="submit" value="Rechercher"/>
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+    <div class="div-cards">
+        <ul class="cards">
+        {% for advert in adverts %}
+            <li>
+                <a href="{{ path('show', { 'id': advert.id }) }}" class="card">
+                    <img src="{{vich_uploader_asset(advert, 'imageFile')}}" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                            <span class="card__price">{{ advert.price }}€</span>
+                            <div class="card__header-text">
+                                <h3 class="card__title">{{ advert.title }} </h3>
+                                <span class="card__status">{{ advert.publishedAt|date('d-m-Y') }}</span>
+                            </div>
+                        </div>
+                        <p class="card__description">{{ advert.content}}</p>
+                    </div>
+                </a>
+            </li>
+
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

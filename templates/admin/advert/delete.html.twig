@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {% include 'headers/_bandeau_out.html.twig' %}
+    <br>
+    <br>
+    <div class="delete">
+        <h3> Etes-vous sûr de vouloir supprimer l'annonce : {{ advert.title }} publiée par {{ advert.publisher.name }}?</h3>
+        <br>
+        <br>
+        {{ form_start(form) }}
+        <input class="btn btn-orange" type="submit" value="Supprimer cette annonce"/>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

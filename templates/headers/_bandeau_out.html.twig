@@ -1,0 +1,18 @@
+<div class="bandeau-top">
+    <nav class="navbar navbar-dark bg-orange">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <h1 class="back-title">The Right Corner</h1>
+    <a class="btn" href="{{ path('index') }}"><i class="material-icons bandeau-icon">home</i></a>
+    <a class="btn" href="{{ path('logout') }}"><i class="material-icons bandeau-icon">logout</i></a>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-orange p-4">
+            {% include '_nav.html.twig' %}
+        </div>
+    </div>
+    <div class="div-image"></div>
+</div>

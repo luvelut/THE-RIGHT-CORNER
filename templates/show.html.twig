@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {% include 'headers/_bandeau_in.html.twig' %}
+    <br>
+    <br>
+    <a class="btn-orange btn btn-retour" href="{{ path("index") }}">Retour</a>
+    <br>
+
+    <div class="advert-show-img">
+        <img src="{{vich_uploader_asset(advert, 'imageFile')}}" class="card__image" alt="" />
+    </div>
+    <div class="advert-show">
+        <h2>{{ advert.title }}</h2>
+        <p class="advert-show-price">Prix : {{ advert.price }}€</p>
+        <p>Description : {{ advert.content}}</p>
+        <span class="card__status">Annonce publiée/modifiée le {{ advert.publishedAt|date('d-m-Y') }}</span>
+        <span class="card__status" >par {{ advert.publisher.name }}</span>
+        <br>
+        <a class="btn-orange btn btn-contact" href="">Contactez le vendeur</a>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Ultra&display=swap');
+
+.bandeau-top{
+    background: #ed7d31;
+    color: #ffffff;
+    height: 220px;
+    padding-top: 2%;
+}
+
+.bandeau-top h1{
+    font-family: 'Sigmar One', cursive;
+    font-size: 3.5em;
+    display: inline-block;
+    margin-right: 16%;
+}
+
+.bandeau-icon {
+    color: white;
+    font-size: 50px;
+}
+
+.front-title {
+    margin-left: 32%;
+}
+
+.back-title {
+    margin-left: 25%;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.div-image {
+    background-image: url(../images/bandeau.jpg);
+    height: 169px;
+    width: 100%;
+    display: inline-block;
+}
+
+.btn-orange {
+    background-color: #ed7d31;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: white;
+    color: #ed7d31;
+    border: #ed7d31 solid 1px;
+}
+
+.bg-orange {
+    background-color: #ed7d31;
+}
+
+.search-form {
+    display: inline-block;
+}
+
+.search  {
+    margin-left: 40%;
+    margin-top: 4%;
+}
+
+.advert-show-img img {
+    width: 400px;
+}
+
+.advert-show-img{
+    display: inline-block;
+    margin-left: 20%;
+}
+
+.advert-show {
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.advert-show h2{
+    color: #ed7d31;
+}
+
+.btn-retour {
+    margin-left: 2%;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.registration {
+    width: 400px;
+    margin-left: 35%;
+    text-align: center;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-body{
+    width: 400px;
+    margin-left: 35%;
+    text-align: center;
+}
+
+.title-list {
+    text-align: center;
+}
+
+td i:hover {
+    color: #ed7d31;
+}
+
+.delete {
+    text-align: center;
+}
+
+.btn-ajout {
+    margin-left: 15%;
+    margin-bottom: 2%;
+}
+
+.table {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.index-admin {
+    width: 600px;
+    margin-left: 30%;
+    text-align: center;
+}
+
+.btn-contact {
+    margin-top: 2%;
+}
+
+/* ADVERT CARD */
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #ffffff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__price {
+    color:#ed7d31;
+    font-size: 30px;
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}

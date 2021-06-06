@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% include 'headers/_bandeau_out.html.twig' %}
+    <br>
+    <br>
+    <div class="registration">
+        <h1>Ajout d'une annonce</h1>
+        {% include 'member/advert/partial/_form.html.twig' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% include 'headers/_bandeau_in.html.twig' %}
+
+    <br>
+    <br>
+    <div class="registration">
+        <h1>Ajout d'un utilisateur</h1>
+        {% include 'admin/member/partial/_form.html.twig' %}
+    </div>
+{% endblock %}

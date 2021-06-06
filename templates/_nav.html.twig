@@ -1,0 +1,27 @@
+{% if is_granted(constant('App\\Security\\Role::ROLE_ADMIN')) %}
+    <ul>
+        <li>
+            <a href="{{ path("admin_member_list")}}">Gestion des utilisateurs</a>
+        </li>
+        <li>
+            <a href="{{ path("admin_advert_list")}}">Gestion des annonces</a>
+        </li>
+        <li>
+            <a href="{{ path("logout")}}">Déconnexion</a>
+        </li>
+    </ul>
+{% endif %}
+
+{% if is_granted(constant('App\\Security\\Role::ROLE_MEMBER')) %}
+    <ul>
+        <li>
+            <a href="{{ path("member_advert_list")}}">Gestion de mes annonces</a>
+        </li>
+        <li>
+            <a href="{{ path("member_edit")}}">Gestion de mon compte</a>
+        </li>
+        <li>
+            <a href="{{ path("logout")}}">Déconnexion</a>
+        </li>
+    </ul>
+{% endif %}

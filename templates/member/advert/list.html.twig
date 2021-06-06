@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% include 'headers/_bandeau_out.html.twig' %}
+    <br>
+    <br>
+    <div class="title-list">
+        <h1>Mes annonces</h1>
+        <br>
+        {% include '_flash.html.twig' %}
+        <br>
+    </div>
+
+    <a  class="btn btn-orange btn-ajout" href="{{ path('member_advert_new') }}">Ajouter une annonce</a>
+    {% if adverts|length > 0 %}
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Auteur</th>
+                <th>Date de publication</th>
+                <th colspan="2">Actions</th>
+            </tr>
+            </thead>
+
+
+            {% for advert in adverts %}
+                <tbody>
+                <tr>
+                    <td>{{ advert.id }}</td>
+                    <td>{{ advert.title }}</td>
+                    <td>{{ advert.publisher.login }}</td>
+                    <td>{{ advert.publishedAt|date('d-m-Y') }}</td>
+                    <td><a class="btn" href="{{ path('member_advert_edit',{ 'id': advert.id }) }}"><i class="material-icons">edit</i></a></td>
+                    <td><a  class="btn" href="{{ path('member_advert_delete',{ 'id': advert.id }) }}"><i class="material-icons">delete</i></a></td>
+                </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    {% else %}
+        <div class="title-list">
+            <p>Vous n'avez pas encore posté d'annonces sur la plateforme.</p>
+        </div>
+    {% endif %}
+{% endblock %}
